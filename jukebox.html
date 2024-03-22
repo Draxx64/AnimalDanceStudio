@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jukebox</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jukebox</h1>
+    </header>
+
+    <div class="tab-buttons">
+        <button class="tab-button" onclick="showTab(1)">Giraffe</button>
+        <button class="tab-button" onclick="showTab(2)">Monkey</button>
+        <button class="tab-button" onclick="showTab(3)">Cat</button>
+    </div>
+
+    <div id="tab1" class="tab tab-content active">
+        <h2>Giraffe</h2>
+        <p>This is a giraffe.</p>
+        <img src="https://t4.ftcdn.net/jpg/02/33/43/25/360_F_233432595_6JWV4IchNuAnPrrqtCRjCJTjTwxomYki.jpg" alt="Giraffe">
+    </div>
+
+    <div id="tab2" class="tab tab-content">
+        <h2>Monkey</h2>
+        <p>This is a monkey.</p>
+        <img src="https://clipart-library.com/images/8T68xB97c.jpg" alt="Monkey">
+    </div>
+
+    <div id="tab3" class="tab tab-content">
+        <h2>Cat</h2>
+        <p>This is a cat.</p>
+        <img src="https://img.freepik.com/premium-vector/cute-cat-cartoon-vector-illustration_921448-1392.jpg" alt="Cat">
+    </div>
+
+    <div style="text-align: center;">
+        <button>Home</button>
+        <button onclick="playSong()">Jukebox</button>
+        <button>Dance Arena</button>
+    </div>
+	
+<audio autoplay id="thing i found">
+  <source src="song i found.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+	
+</body>
+
+<script src="scripts.js"></script>
+
+</html>
