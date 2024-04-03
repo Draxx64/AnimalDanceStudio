@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #1a4e21; /* Dark green for jungle vibe */
-    color: #fff; /* White text for contrast */
+    background-color: #1a4e21;
+    color: #fff;
 }
 
 header {
@@ -16,13 +16,13 @@ button {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    border: 1px solid #285c2a; /* Darker green border */
-    background-color: #4a9d5b; /* Green button color */
-    color: #fff; /* White text for contrast */
+    border: 1px solid #285c2a;
+    background-color: #4a9d5b;
+    color: #fff;
 }
 
 button:hover {
-    background-color: #65b375; /* Lighter green on hover */
+    background-color: #65b375;
 }
 
 .tab {
@@ -34,21 +34,21 @@ button:hover {
 }
 
 .tab-button {
-    background-color: #4a9d5b; /* Green button color */
-    border: 1px solid #285c2a; /* Darker green border */
+    background-color: #4a9d5b;
+    border: 1px solid #285c2a; 
     padding: 10px 20px;
     cursor: pointer;
     border-bottom: none;
-    color: #fff; /* White text for contrast */
+    color: #fff;
 }
 
 .tab-button.active {
-    background-color: #65b375; /* Lighter green for active tab */
-    border-bottom: 1px solid #285c2a; /* Darker green border */
+    background-color: #65b375;
+    border-bottom: 1px solid #285c2a;
 }
 
 .tab-content {
     padding: 20px;
-    border: 1px solid #7ca47f; /* Light green border */
-    background-color: #2e6634; /* Darker green background */
+    border: 1px solid #7ca47f;
+    background-color: #2e6634;
 }
