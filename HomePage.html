@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #1a4e21;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #285c2a;
+            background-color: #4a9d5b;
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #65b375;
+        }
+
+        .tab {
+            display: none;
+        }
+
+        .tab.active {
+            display: block;
+        }
+
+        .tab-button {
+            background-color: #4a9d5b;
+            border: 1px solid #285c2a;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: none;
+            color: #fff;
+        }
+
+        .tab-button.active {
+            background-color: #65b375;
+            border-bottom: 1px solid #285c2a;
+        }
+
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #7ca47f;
+            background-color: #2e6634;
+        }
+
+        .welcome-text {
+            text-align: center;
+            padding: 20px;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Animal Dance Party!</h1>
+    </header>
+
+    <div class="welcome-text">
+        <p>Welcome to the best place on the internet for animals and music! Pick a song, read some facts on your favorite animal, and take them to the DANCE FLOOR. Have fun and enjoy your stay!</p>
+    </div>
+
+    <div style="text-align: center;">
+        <button onclick="window.location.href='jukebox.html'">Jukebox</button>
+        <button onclick="window.location.href='animals.html'">Animals</button>
+        <button onclick="window.location.href='dancefloor.html'">Dance Floor</button>
+    </div>
+    <img src = "DancingBear.gif" class="center"> 
+</body>
+</html>
