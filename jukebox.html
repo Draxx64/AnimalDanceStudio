@@ -1,51 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jukebox</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-color: #1a4e21;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .jukebox {
+            background-color: #2e6634;
+            border-radius: 20px;
+            padding: 20px;
+        }
+	button {
+    	padding: 10px 20px;
+    	margin: 10px;
+    	font-size: 16px;
+    	cursor: pointer;
+    	border-radius: 5px;
+    	border: 1px solid #285c2a;
+    	background-color: #4a9d5b;
+    	color: #fff;
+	}
+        .song-button {
+            background-color: #4a9d5b;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .song-button.selected {
+            background-color: #65b375; 
+        }
+
+        .play-button, .stop-button {
+            background-color: #4a9d5b; 
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+		.stop-button:hover {
+        	background-color: #65b375; 
+        }
+        .play-button:hover {
+            background-color: #65b375;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Jukebox</h1>
-    </header>
-
-    <div class="tab-buttons">
-        <button class="tab-button" onclick="showTab(1)">Giraffe</button>
-        <button class="tab-button" onclick="showTab(2)">Monkey</button>
-        <button class="tab-button" onclick="showTab(3)">Cat</button>
+    <div class="container">
+        <div class="jukebox">
+            <h1>Jukebox</h1>
+            <button class="song-button" id="song1">Song 1</button>
+            <button class="song-button" id="song2">Song 2</button>
+            <button class="song-button" id="song3">Song 3</button>
+            <button class="song-button" id="song4">Song 4</button>
+            <button class="song-button" id="song5">Song 5</button>
+            <button class="play-button">Play</button>
+            <button class="stop-button">Stop</button>
+        </div>
     </div>
-
-    <div id="tab1" class="tab tab-content active">
-        <h2>Giraffe</h2>
-        <p>This is a giraffe.</p>
-        <img src="https://t4.ftcdn.net/jpg/02/33/43/25/360_F_233432595_6JWV4IchNuAnPrrqtCRjCJTjTwxomYki.jpg" alt="Giraffe">
-    </div>
-
-    <div id="tab2" class="tab tab-content">
-        <h2>Monkey</h2>
-        <p>This is a monkey.</p>
-        <img src="https://clipart-library.com/images/8T68xB97c.jpg" alt="Monkey">
-    </div>
-
-    <div id="tab3" class="tab tab-content">
-        <h2>Cat</h2>
-        <p>This is a cat.</p>
-        <img src="https://img.freepik.com/premium-vector/cute-cat-cartoon-vector-illustration_921448-1392.jpg" alt="Cat">
-    </div>
-
-    <div style="text-align: center;">
+    
+	<div style="text-align: center;">
         <button>Home</button>
         <button onclick="playSong()">Jukebox</button>
         <button>Dance Arena</button>
     </div>
-	
-<audio autoplay id="thing i found">
-  <source src="song i found.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
-	
+    <script>
+        const songButtons = document.querySelectorAll('.song-button');
+        songButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                songButtons.forEach(btn => btn.classList.remove('selected'));
+                button.classList.add('selected');
+            });
+        });
+    </script>
 </body>
-
-<script src="scripts.js"></script>
-
 </html>
