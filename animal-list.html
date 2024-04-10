@@ -2,57 +2,150 @@
 <html>
 <head>
     <title>Animal List</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #1a4e21;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #285c2a;
+            background-color: #4a9d5b;
+            color: #fff;
+        }
+        button:hover {
+            background-color: #65b375;
+        }
+        .tab {
+            display: none;
+        }
+        .tab.active {
+            display: block;
+        }
+        .tab-button {
+            background-color: #4a9d5b;
+            border: 1px solid #285c2a;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: none;
+            color: #fff;
+        }
+        .tab-button.active {
+            background-color: #65b375;
+            border-bottom: 1px solid #285c2a;
+        }
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #7ca47f;
+            background-color: #2e6634;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Animal List</h1>
     </header>
-
+    
     <div class="tab-buttons">
         <button class="tab-button" onclick="showTab(1)">Giraffe</button>
         <button class="tab-button" onclick="showTab(2)">Monkey</button>
         <button class="tab-button" onclick="showTab(3)">Cat</button>
+        <button class="tab-button" onclick="showTab(4)">Dog</button>
+        <button class="tab-button" onclick="showTab(5)">Frog</button>
+        <button class="tab-button" onclick="showTab(6)">Bear</button>
+        <button class="tab-button" onclick="showTab(7)">Gorilla</button>
+        <button class="tab-button" onclick="showTab(8)">Crocodile</button>
+        <button class="tab-button" onclick="showTab(9)">Armadillo</button>
+        <button class="tab-button" onclick="showTab(10)">Raccoon</button>
     </div>
-
+    
     <div id="tab1" class="tab tab-content active">
         <h2>Giraffe</h2>
-        <p>This is a giraffe.</p>
-        <img src="https://t4.ftcdn.net/jpg/02/33/43/25/360_F_233432595_6JWV4IchNuAnPrrqtCRjCJTjTwxomYki.jpg" alt="Giraffe">
+        <p>Giraffes are the tallest animal in the animal kingdom standing up to 14 to 18 feet tall thanks to their long neck. Their neck comprises of seven neck bones; the same amount as humans.</p>
+        <img src="https://cdn.mos.cms.futurecdn.net/mEuBJTDhXuTfSKdLefzSKg-1200-80.jpg" alt="Giraffe" width="600" height="400">
     </div>
-
+    
     <div id="tab2" class="tab tab-content">
         <h2>Monkey</h2>
-        <p>This is a monkey.</p>
-        <img src="https://clipart-library.com/images/8T68xB97c.jpg" alt="Monkey">
+        <p>Monkeys are adept tree dwellers and climbers. They are able to use their tail as a fifth limb to traverse the treetops quickly.</p>
+        <img src="https://wp.technologyreview.com/wp-content/uploads/2023/04/GettyImages-1158496265.jpeg" alt="Monkey" width="600" height="400">
     </div>
-
+    
     <div id="tab3" class="tab tab-content">
         <h2>Cat</h2>
-        <p>This is a cat.</p>
-        <img src="https://img.freepik.com/premium-vector/cute-cat-cartoon-vector-illustration_921448-1392.jpg" alt="Cat">
+        <p>Cats are able to retract their claws, kind of like a sheathe. This is so they can keep their claws as sharp as possible.</p>
+        <img src="https://i.cbc.ca/1.7046282.1701447456!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/humane-society.jpg" alt="Cat" width="600" height="400">
     </div>
+    
+    <div id="tab4" class="tab tab-content">
+        <h2>Dog</h2>
+        <p>Dogs have an incredible sense of smell. Their noses are at least 40 times more effective than human noses.</p>
+        <img src="https://cdn.britannica.com/79/232779-050-6B0411D7/German-Shepherd-dog-Alsatian.jpg" alt="Dog" width="600" height="400">
+    </div>
+    
+    <div id="tab5" class="tab tab-content">
+        <h2>Frog</h2>
+        <p>Because of their long hind legs, frogs have an amazing leaping ability and can leap over 20 times their body length.</p>
+        <img src="https://www.pbs.org/wnet/nature/files/2021/05/frog-610x343.png" alt="Frog" width="600" height="400">
+    </div>
+    
+    <div id="tab6" class="tab tab-content">
+        <h2>Bear</h2>
+        <p>Brown bears have claws that are over two inches long and can be up to over four inches long. Their claws are used for digging for food and self-defense.</p>
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/211125112643-bart-the-bear-ii.jpg?q=x_2,y_0,h_898,w_1596,c_crop/h_833,w_1480" alt="Bear" width="600" height="400">
+    </div>
+    
+    <div id="tab7" class="tab tab-content">
+        <h2>Gorilla</h2>
+        <p>Gorillas are the largest primate in the world. They can stand up to four to six feet tall and can weigh nearly 500 pounds.</p>
+        <img src="https://files.worldwildlife.org/wwfcmsprod/images/Mountain_Gorilla_Carousel_Image_48384.jpg/carousel_small/2ekufeboqr_Mountain_Gorilla_Carousel_Image_48384.jpg" alt="Gorilla" width="600" height="400">
+    </div>
+    
+    <div id="tab8" class="tab tab-content">
+        <h2>Crocodile</h2>
+        <p>Saltwater crocodiles have an incredible bite force of 3,700 pounds per square inch (psi) or 16,460 newtons. That's around the weight of a small car!</p>
+        <img src="https://c02.purpledshub.com/uploads/sites/62/2014/11/GettyImages-123529247-2a29d6c.jpg" alt="Crocodile" width="600" height="400">
+    </div>
+    
+    <div id="tab9" class="tab tab-content">
+        <h2>Armadillo</h2>
+        <p>Armadillos are covered in a hard amor-like shell that covers their back, head, legs, and tail. When they feel impending danger, they curl up into a ball where only their armor is exposed, protecting them from predators.</p>
+        <img src="https://bernheim.org/wp-content/uploads/2023/07/9-banded-armadillo.png" alt="Armadillo" width="600" height="400">
+    </div>
+    
+    <div id="tab10" class="tab tab-content">
+        <h2>Raccoon</h2>
+        <p>Raccoon paws closely resemble human hands and can be used to easily manipulate food and objects.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Raccoon_in_Central_Park_%2835264%29.jpg/1200px-Raccoon_in_Central_Park_%2835264%29.jpg" alt="TRaccoon" width="600" height="400">
+    </div>
+    
+    <script>
+        function showTab(tabNumber) {
+            const tabs = document.querySelectorAll('.tab');
+            const tabButtons = document.querySelectorAll('.tab-button');
 
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            document.getElementById('tab' + tabNumber).classList.add('active');
+            document.querySelector('.tab-button:nth-child(' + tabNumber + ')').classList.add('active');
+        }
+    </script>
+    
     <div style="text-align: center;">
         <button>Home</button>
-		<button onclick="openma('jukebox.html')">Jukebox</button>
-      
+        <button>Jukebox</button>
         <button>Dance Arena</button>
     </div>
-	
-	<form id="FORMA">
-		<input type="text" name="animal">animal</input>
-		<input type="text" name="song">song</input>
-	</form> 
-	<button onclick="tojukebox()">LMAO</button>
-	
-<audio autoplay id="thing i found">
-  <source src="song i found.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
-	
 </body>
-
-<script src="scripts.js"></script>
-
 </html>
