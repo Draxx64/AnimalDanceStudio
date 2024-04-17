@@ -83,26 +83,73 @@
         .button-group button {
             margin: 10px;
         }
+		
+		#animImg{
+			height: 75%;
+			width: 75%;
+			display: block;
+			position: relative;
+		}
+		
+		.animImg{
+			height: 75%;
+			width: 75%;
+			display: block;
+			animation: move 1.25s linear infinite;
+			position: relative;
+		}
+		
+		@keyframes move {
+			0% {
+				left: -50px;
+				top: 15px;
+				transform: rotate(-10deg)
+			}
+			25% {
+				left: 0px; /* Move to the right */
+				top: -15px;
+				transform: rotate(0deg)
+			}
+			50% {
+				left: 50px; /* Move back to the left */
+				top: 15px;
+				transform: rotate(10deg)
+			}
+			75%{
+				left: 0px; /* Move to the right */
+				top: -15px;
+				transform: rotate(0deg)
+			}
+			100%{
+				left: -50px;
+				top: 15px;
+				transform: rotate(-10deg)
+			}
+		}
+		
     </style>
 </head>
 <body>
     <header>
-        <button class="tab-button active" onclick="openTab('home')">Home</button>
-        <button class="tab-button" onclick="openTab('animals')">Animals</button>
-        <button class="tab-button" onclick="openTab('jukebox')">Jukebox</button>
+        <button onclick="topage('HomePage.html')">Home</button>
+        <button onclick="topage('animal-list.html')">Animals</button>
+        <button onclick="topage('jukebox.html')">Jukebox</button>
     </header>
     
     <div class="container">
         <button onclick="changeColor()">Color</button>
-        <div class="box"></div>
+        <div id="box" class="box" style="display: flex; overflow: hidden; align-items: center; justify-content: center;"></div>
         <div class="button-group">
-            <button class="tab-button" onclick="openTab('dance')">Dance</button>
-            <button class="tab-button" onclick="openTab('manual')">Manual</button>
+            <button class="tab-button" onclick="makeDance()">Dance</button>
         </div>
         <button onclick="playPause()">Play/Pause</button>
     </div>
-
+<script src="scripts.js"></script>
     <script>
+	
+	var div = document.getElementById("box");
+		div.innerHTML = "<img src='" + animImg + "' id='animImg'>";
+	
         function openTab(tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab");
@@ -127,9 +174,20 @@
             }
         }
 
+		var playTog = false;
         function playPause() {
-            alert('Play/Pause button clicked');
+            playTog = !playTog;
+			if(playTog) playSong();
+			if(!playTog) stopSong();
         }
+		
+		var dancingImg = document.getElementById("animImg");
+		function makeDance(){
+			dancingImg.classList.toggle("animImg");
+		}
+		
+		
+		
     </script>
 </body>
 </html>

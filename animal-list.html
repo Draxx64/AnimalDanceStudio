@@ -138,14 +138,30 @@
             tabButtons.forEach(button => button.classList.remove('active'));
 
             document.getElementById('tab' + tabNumber).classList.add('active');
+			var thing = document.getElementById('tab' + tabNumber);
+			var temp = "";
+			var read = false;
+			for(var i = 0; i < thing.innerHTML.length; i++){
+				if(thing.innerHTML[i] == ">"){
+					read = true;
+					continue;
+				}
+				if(read){
+					if(thing.innerHTML[i] == "<") break;
+					temp += thing.innerHTML[i];
+				}
+			}
+			selAnimal = temp;
+			
             document.querySelector('.tab-button:nth-child(' + tabNumber + ')').classList.add('active');
         }
     </script>
     
     <div style="text-align: center;">
-        <button>Home</button>
-        <button>Jukebox</button>
-        <button>Dance Arena</button>
+		<button onclick="topage('HomePage.html')">Home</button>
+        <button onclick="topage('jukebox.html')">Jukebox</button>
+        <button onclick="topage('dancefloor.html')">Dance Floor</button>
     </div>
+	<script src="scripts.js"></script>
 </body>
 </html>

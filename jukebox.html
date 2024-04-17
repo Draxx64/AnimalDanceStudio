@@ -86,9 +86,9 @@
     </div>
     
 	<div style="text-align: center;">
-        <button>Home</button>
-        <button onclick="playSong()">Jukebox</button>
-        <button>Dance Arena</button>
+        <button onclick="topage('HomePage.html')">Home</button>
+        <button onclick="topage('animal-list.html')">Animals</button>
+        <button onclick="topage('dancefloor.html')">Dance Floor</button>
     </div>
     <script>
         const songButtons = document.querySelectorAll('.song-button');
@@ -96,8 +96,27 @@
             button.addEventListener('click', () => {
                 songButtons.forEach(btn => btn.classList.remove('selected'));
                 button.classList.add('selected');
+				switch(button.id){
+					case "song1":
+						selSong = "found";
+					break;
+					case "song2":
+						selSong = "town";
+					break;
+					case "song3":
+						selSong = "chipi";
+					break;
+					case "song4":
+						selSong = "coffin";
+					break;
+					case "song5":
+						selSong = "hey";
+					break;
+					
+				}
             });
         });
     </script>
+	<script src="scripts.js"></script>
 </body>
 </html>
