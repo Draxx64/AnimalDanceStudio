@@ -80,8 +80,8 @@
             <button class="song-button" id="song3">Song 3</button>
             <button class="song-button" id="song4">Song 4</button>
             <button class="song-button" id="song5">Song 5</button>
-            <button class="play-button">Play</button>
-            <button class="stop-button">Stop</button>
+            <button class="play-button" onclick="playSong()">Play</button>
+            <button class="stop-button" onclick="stopSong()">Stop</button>
         </div>
     </div>
     
@@ -90,6 +90,7 @@
         <button onclick="topage('animal-list.html')">Animals</button>
         <button onclick="topage('dancefloor.html')">Dance Floor</button>
     </div>
+	<script src="scripts.js"></script>
     <script>
         const songButtons = document.querySelectorAll('.song-button');
         songButtons.forEach(button => {
@@ -112,11 +113,11 @@
 					case "song5":
 						selSong = "hey";
 					break;
-					
 				}
+				initSong();
             });
         });
     </script>
-	<script src="scripts.js"></script>
+	
 </body>
 </html>

@@ -95,20 +95,35 @@ var songfile = songSwitch(selSong);
 var song;
 
 function initSong(){
-	var newElem = document.createElement("audio");
+	var newElem = document.getElementById("songtoplay");
+	var creating_flag = false;
+	if(!newElem){
+		creating_flag = true;
+		newElem = document.createElement("audio");
+	}
+	newElem.setAttribute("id", "songtoplay");
 	newElem.setAttribute("style", "display: none;");
+	
+	songfile = songSwitch(selSong);
+	
 	var temp1 = "";
 	temp1 +=  "<source src='" + songfile + "' type='audio/mp3'>";
 	newElem.innerHTML = temp1;
 	
 	song = newElem;
 	
-	document.body.appendChild(newElem);
+	if(creating_flag){
+		document.body.appendChild(newElem);
+	}
+	console.log(song);
+	console.log(songfile);
+	newElem.load();
 }
 
 initSong();
 
 function playSong(){
+	song.volume = 0.1;
 	song.pause();
 	song.currentTime = 0;
 	song.play();
